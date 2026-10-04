@@ -1,0 +1,7 @@
+Node received: {"action":"READ","path":"notes.txt"}
+Gateway received: {"status":"OK"}
+Replay rejected: unexpected sequence number
+Modified ciphertext rejected: invalid record MAC
+Original next record accepted after tampering was rejected.
+Reflected record rejected: invalid record MAC
+Task 3 demonstration completed.

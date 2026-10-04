@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/ubuntu/csce465-agentsec/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/ubuntu/csce465-agentsec/hw2
+collecting ... collected 35 items
+
+tests/test_handshake.py::test_valid_handshake PASSED                     [  2%]
+tests/test_handshake.py::test_fresh_session_keys PASSED                  [  5%]
+tests/test_handshake.py::test_changed_local_fields[4-local DH public value changed] PASSED [  8%]
+tests/test_handshake.py::test_changed_local_fields[6-local nonce changed] PASSED [ 11%]
+tests/test_handshake.py::test_changed_peer_fields_break_signature[5] PASSED [ 14%]
+tests/test_handshake.py::test_changed_peer_fields_break_signature[7] PASSED [ 17%]
+tests/test_handshake.py::test_incorrect_declared_length PASSED           [ 20%]
+tests/test_handshake.py::test_truncated_transcript PASSED                [ 22%]
+tests/test_handshake.py::test_trailing_transcript_data PASSED            [ 25%]
+tests/test_handshake.py::test_unexpected_identity PASSED                 [ 28%]
+tests/test_handshake.py::test_invalid_signature PASSED                   [ 31%]
+tests/test_handshake.py::test_incorrect_peer_public_key PASSED           [ 34%]
+tests/test_handshake.py::test_reflected_signature PASSED                 [ 37%]
+tests/test_handshake.py::test_role_binding_even_with_same_rsa_key PASSED [ 40%]
+tests/test_handshake.py::test_reflected_dh_offer PASSED                  [ 42%]
+tests/test_handshake.py::test_old_transcript_rejected_by_new_session PASSED [ 45%]
+tests/test_handshake.py::test_completed_handshake_cannot_be_reused PASSED [ 48%]
+tests/test_secure_record.py::test_bidirectional_messages PASSED          [ 51%]
+tests/test_secure_record.py::test_tampering_rejected_before_decryption[ciphertext] PASSED [ 54%]
+tests/test_secure_record.py::test_tampering_rejected_before_decryption[header] PASSED [ 57%]
+tests/test_secure_record.py::test_tampering_rejected_before_decryption[iv] PASSED [ 60%]
+tests/test_secure_record.py::test_tampering_rejected_before_decryption[tag] PASSED [ 62%]
+tests/test_secure_record.py::test_replay_rejected PASSED                 [ 65%]
+tests/test_secure_record.py::test_reflection_rejected PASSED             [ 68%]
+tests/test_secure_record.py::test_out_of_order_rejected_without_advancing_state PASSED [ 71%]
+tests/test_secure_record.py::test_malformed_record[short] PASSED         [ 74%]
+tests/test_secure_record.py::test_malformed_record[truncated] PASSED     [ 77%]
+tests/test_secure_record.py::test_malformed_record[extra] PASSED         [ 80%]
+tests/test_secure_record.py::test_authenticated_invalid_header[0-2-unsupported record version] PASSED [ 82%]
+tests/test_secure_record.py::test_authenticated_invalid_header[1-1-wrong record direction] PASSED [ 85%]
+tests/test_secure_record.py::test_authenticated_wrong_iv PASSED          [ 88%]
+tests/test_secure_record.py::test_empty_plaintext PASSED                 [ 91%]
+tests/test_secure_record.py::test_sequence_and_iv_encoding PASSED        [ 94%]
+tests/test_secure_record.py::test_send_sequence_exhaustion PASSED        [ 97%]
+tests/test_secure_record.py::test_separate_directional_keys PASSED       [100%]
+
+======================== 35 passed in 78.17s (0:01:18) =========================

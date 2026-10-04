@@ -1,0 +1,13 @@
+Original command: {"action":"READ","path":"notes.txt"}
+
+--- Bit-flip attack: READ -> EDIT ---
+Original bytes:    52454144
+Replacement bytes: 45444954
+XOR difference:    17010810
+Original ciphertext: 4ccfb9d1e6e8f73b52c26762a78a20b0e5c493e6ab1666bdaa47168bc96ae5935a074369
+Modified ciphertext: 4ccfb9d1e6e8f73b52c26775a68230b0e5c493e6ab1666bdaa47168bc96ae5935a074369
+Processed #1: {"action":"EDIT","path":"notes.txt"}
+
+--- Replay the identical modified ciphertext ---
+Processed #2: {"action":"EDIT","path":"notes.txt"}
+Replay accepted: the same command was processed twice.

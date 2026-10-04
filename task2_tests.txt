@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/ubuntu/csce465-agentsec/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/ubuntu/csce465-agentsec/hw2
+collecting ... collected 17 items
+
+tests/test_handshake.py::test_valid_handshake PASSED                     [  5%]
+tests/test_handshake.py::test_fresh_session_keys PASSED                  [ 11%]
+tests/test_handshake.py::test_changed_local_fields[4-local DH public value changed] PASSED [ 17%]
+tests/test_handshake.py::test_changed_local_fields[6-local nonce changed] PASSED [ 23%]
+tests/test_handshake.py::test_changed_peer_fields_break_signature[5] PASSED [ 29%]
+tests/test_handshake.py::test_changed_peer_fields_break_signature[7] PASSED [ 35%]
+tests/test_handshake.py::test_incorrect_declared_length PASSED           [ 41%]
+tests/test_handshake.py::test_truncated_transcript PASSED                [ 47%]
+tests/test_handshake.py::test_trailing_transcript_data PASSED            [ 52%]
+tests/test_handshake.py::test_unexpected_identity PASSED                 [ 58%]
+tests/test_handshake.py::test_invalid_signature PASSED                   [ 64%]
+tests/test_handshake.py::test_incorrect_peer_public_key PASSED           [ 70%]
+tests/test_handshake.py::test_reflected_signature PASSED                 [ 76%]
+tests/test_handshake.py::test_role_binding_even_with_same_rsa_key PASSED [ 82%]
+tests/test_handshake.py::test_reflected_dh_offer PASSED                  [ 88%]
+tests/test_handshake.py::test_old_transcript_rejected_by_new_session PASSED [ 94%]
+tests/test_handshake.py::test_completed_handshake_cannot_be_reused PASSED [100%]
+
+======================== 17 passed in 74.37s (0:01:14) =========================
